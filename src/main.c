@@ -33,7 +33,8 @@ int main()
 	intrflush(footer_win, FALSE);
 	keypad(footer_win, TRUE);
 	//
-	wborder(footer_win, ' ',' ',0,' ', ' ', ' ', ' ', ' ');
+	wmove(footer_win,0,0);
+	whline(footer_win, ACS_HLINE, COLS);
 	wmove(footer_win,1,0);
 	wprintw(footer_win,"This is a footer\n:)\n:o");
 	wrefresh(footer_win);
